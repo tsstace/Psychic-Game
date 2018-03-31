@@ -1,0 +1,34 @@
+
+}
+/* Do this loop for each guess. Leave the loop when the guess is */
+
+counter = 0;
+do
+    {
+    counter++;
+
+    guess = HTMLInputElement("What's your guess?");
+    number.innerHTML("Guess #"+counter+" was "+guess+"<BR>");
+
+    if (guess == number) {
+        number.innerHTML("You guessed it!<BR>");
+        }
+    else  {
+        if (guess < number)  {
+            number.innerHTML("Too small, guess again.<BR>");
+            }
+        else  {
+            number.innerHTML("Too big, guess again.<BR>");
+            }
+        }       
+    } 
+    while (counter <10 && guess != number);
+
+if (guess != number) {
+        number.innerHTML("I fooled you 10 times - the number was " + number+".<BR>");
+        }
+
+function ClearFields() {
+
+     document.getElementById('guess').value = "";
+}
